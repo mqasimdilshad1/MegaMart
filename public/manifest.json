@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "MegaMart",
+  "name": "MegaMart the eccomerce application build with reactjs",
   "icons": [
     {
       "src": "favicon.ico",

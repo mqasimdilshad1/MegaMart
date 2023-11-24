@@ -13,6 +13,7 @@ const SearchBar = () => {
     setDropdownOpen(false);
   };
 
+  const categories = ["All", "Mobiles", "Games", "Toys", "Deals", "Books"];
   return (
     <div className="search-field-container">
       <div className="search-dropdown">
@@ -23,13 +24,11 @@ const SearchBar = () => {
 
         {isDropdownOpen && (
           <div className="dropdown-content">
-            <option onClick={() => handleCategorySelect("Mobiles")}>
-              Mobiles
-            </option>
-            <option onClick={() => handleCategorySelect("Games")}>Games</option>
-            <option onClick={() => handleCategorySelect("Toys")}>Toys</option>
-            <option onClick={() => handleCategorySelect("Deals")}>Deals</option>
-            <option onClick={() => handleCategorySelect("Books")}>Books</option>
+            {categories.map((category) => (
+              <option key={category} onClick={() => handleCategorySelect(category)}>
+                {category}
+              </option>
+            ))}
           </div>
         )}
       </div>
