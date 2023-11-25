@@ -1,5 +1,5 @@
 :root {
-  --blue: #008ecc;
+  --primary: #008ecc;
   --white: #fff;
   --text: #666666;
   --heading: #222222;
@@ -32,7 +32,7 @@ body {
 
 
 .logo {
-  fill: var(--blue);
+  fill: var(--primary);
   width: 8.6rem;
   height: 1.7rem;
   display: flex;
@@ -44,7 +44,7 @@ body {
 }
 
 .logo h1 {
-  color: var(--blue);
+  color: var(--primary);
   text-align: center;
   font-family: Inter;
   font-size: 2.2rem;
@@ -80,7 +80,7 @@ body {
 .cart-detail span {
   padding: 0.2rem 0.5rem;
   border-radius: 70%;
-  background-color: var(--blue);
+  background-color: var(--primary);
   color: var(--white);
   font-size: smaller;
 }
