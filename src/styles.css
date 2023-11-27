@@ -284,7 +284,8 @@ body {
   color: var(--white);
   padding: 35px 35px 10px 15px;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 14px;
+  font-family: Inter;
   z-index: 1;
   border-radius: 20px;
   display: flex;
@@ -380,4 +381,6 @@ body {
     position: absolute;
     left: -1.8rem;
   }
+
+
 }

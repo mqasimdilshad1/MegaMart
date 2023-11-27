@@ -23,6 +23,10 @@ const limitTitleWords = (title, limit) => {
   return (
     <div className="card">
       <div className="image">
+      <div className="sale-tag">
+          <span>{56}%</span>
+          <span>OFF</span>
+        </div>
         <img src={product.image} alt="Product" />
         <div className="overlay">
           <button onClick={toggleButtonText}>{buttonText}</button>
