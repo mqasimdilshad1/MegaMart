@@ -8,12 +8,26 @@
   --searchbar-background: #f3f9fb;
   --dropdown-border: #ccc;
   --dropdowncontent-hover: darkgray;
+  --gold: #ffc915;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --body-background:#E1E1E1;
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--body-background);
+}
+.result-body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  row-gap: 42px;
+
 }
 
 .container {
@@ -28,6 +42,8 @@ body {
   align-items: center;
   flex-shrink: 0;
   border-bottom: 1px solid var(--dropdown-border);
+  background-color: var(--white);
+  
 }
 
 .logo {
@@ -156,6 +172,127 @@ body {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   font-family: Inter;
+}
+
+.card {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 14.1rem;
+  height: 17.7rem;
+  box-shadow: 0 4px 8px var(--card-shadow);
+  overflow: hidden;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--card-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  width: 9.3rem;
+  height: 12rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.card:hover .image img {
+  transform: scale(1.1);
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+.overlay p {
+  color: var(--white);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.overlay button {
+  background-color: var(--white);
+  padding: 8px 23px 8px 23px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: Inter;
+  font-weight: 500;
+  outline: none;
+}
+
+.overlay button:hover {
+  background-color: var(--gold);
+  cursor: pointer;
+}
+
+.content {
+  padding-left: 20px;
+  height: 21.8rem;
+  font-family: Inter;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+}
+
+.title p {
+  font-size: 1rem;
+  margin: 10px 0 0 0;
+  font-family: Inter;
+}
+
+.price p {
+  font-size: 1rem;
+  color: var(--heading);
+  margin-bottom: 0;
+  margin-top: 5px;
+  font-weight: bolder;
+}
+.rating {
+  margin-top: 0;
+}
+
+.sale-tag {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 35px 35px 10px 15px;
+  border-radius: 5px;
+  font-size: 18px;
+  z-index: 1;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: end;
+}
+.card:hover .overlay {
+  opacity: 1;
 }
 
 @media screen and (max-width: 1128px) {

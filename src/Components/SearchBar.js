@@ -13,7 +13,13 @@ const SearchBar = () => {
     setDropdownOpen(false);
   };
 
-  const categories = ["All", "Mobiles", "Games", "Toys", "Deals", "Books"];
+  const categories = [
+    "All",
+    "men's clothing",
+    "jewelery",
+    "electronics",
+    "women's clothing",
+  ];
   return (
     <div className="search-field-container">
       <div className="search-dropdown">
