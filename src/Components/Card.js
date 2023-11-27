@@ -1,35 +1,39 @@
 import React from "react";
 import Rating from "react-rating-stars-component";
 import { useState } from "react";
-
+import { BsCart2 } from "react-icons/bs";
 
 function Card({ product }) {
-
   const [buttonText, setbuttonText] = useState("Add to Cart");
+  const [showCartIcon, setShowCartIcon] = useState(false);
 
-function toggleButtonText() {
-     setbuttonText("View Cart");
-}
-const limitTitleWords = (title, limit) => {
-  const words = title.split(" ");
-
-  if (words.length > limit) {
-    return words.slice(0, limit).join(" ") + "...";
+  function toggleButtonText() {
+    setbuttonText(" View Cart");
+    setShowCartIcon(true);
   }
+  const limitTitleWords = (title, limit) => {
+    const words = title.split(" ");
 
-  return title;
-};
+    if (words.length > limit) {
+      return words.slice(0, limit).join(" ") + "...";
+    }
+
+    return title;
+  };
 
   return (
     <div className="card">
       <div className="image">
-      <div className="sale-tag">
+        <div className="sale-tag">
           <span>{56}%</span>
           <span>OFF</span>
         </div>
         <img src={product.image} alt="Product" />
         <div className="overlay">
-          <button onClick={toggleButtonText}>{buttonText}</button>
+          <button onClick={toggleButtonText}>
+            {showCartIcon && <BsCart2 size={17} />}
+            {buttonText}
+          </button>
         </div>
       </div>
       <div className="content">
