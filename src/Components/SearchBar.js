@@ -25,7 +25,10 @@ const SearchBar = () => {
         {isDropdownOpen && (
           <div className="dropdown-content">
             {categories.map((category) => (
-              <option key={category} onClick={() => handleCategorySelect(category)}>
+              <option
+                key={category}
+                onClick={() => handleCategorySelect(category)}
+              >
                 {category}
               </option>
             ))}

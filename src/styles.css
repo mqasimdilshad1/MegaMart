@@ -16,8 +16,8 @@ body {
   box-sizing: border-box;
 }
 
-.container{
-    padding: 0;
+.container {
+  padding: 0;
 }
 
 .header-content {
@@ -27,9 +27,8 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-shrink: 0;
-  border-bottom:1px solid var(--dropdown-border);
+  border-bottom: 1px solid var(--dropdown-border);
 }
-
 
 .logo {
   fill: var(--primary);
@@ -53,9 +52,9 @@ body {
   line-height: normal;
   margin: 0;
 }
-.logo img{
-    height: 1.7rem;
-    width: 8.6rem;
+.logo img {
+  height: 1.7rem;
+  width: 8.6rem;
 }
 
 .cart-icon {
@@ -75,7 +74,6 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.3rem;
-
 }
 .cart-detail span {
   padding: 0.2rem 0.5rem;
@@ -84,10 +82,10 @@ body {
   color: var(--white);
   font-size: smaller;
 }
-.cart-detail p{
-    font-family: Inter;
-    font-weight: bold;
-    font-size: small;
+.cart-detail p {
+  font-family: Inter;
+  font-weight: bold;
+  font-size: small;
 }
 
 .dropdown-content {
@@ -161,31 +159,29 @@ body {
 }
 
 @media screen and (max-width: 1128px) {
-   
-    .header-content{
-        border-bottom: none;
-    }
-    .container{
-      border-bottom: 1px solid var(--dropdown-border);
-      padding: 0 30px 0 30px;
-    }
-    .search-field{
-        padding-right: 1.8rem;
-    }
-    .dropdown-arrow{
-        padding: 0.95rem;
-    }
-    .logo img{
-        height: 1.5rem;
-        width: 5.6rem;
-    }
-    .logo h1{
-      font-size: 1.7rem;
-    }
+  .header-content {
+    border-bottom: none;
+  }
+  .container {
+    border-bottom: 1px solid var(--dropdown-border);
+    padding: 0 30px 0 30px;
+  }
+  .search-field {
+    padding-right: 1.8rem;
+  }
+  .dropdown-arrow {
+    padding: 0.95rem;
+  }
+  .logo img {
+    height: 1.5rem;
+    width: 5.6rem;
+  }
+  .logo h1 {
+    font-size: 1.7rem;
+  }
 }
 
-@media screen and (max-width: 680px){
-
+@media screen and (max-width: 680px) {
   .header-content {
     position: relative;
     justify-content: space-between;
@@ -209,8 +205,8 @@ body {
 
   .search-icon {
     position: absolute;
-    top: 1rem; 
-    right: 0.5rem ;
+    top: 1rem;
+    right: 0.5rem;
     cursor: pointer;
     margin-right: 0px;
   }
@@ -218,7 +214,7 @@ body {
   .dropdown-content {
     width: 100%;
     justify-content: space-between;
-    top: 100%; 
+    top: 100%;
   }
 
   .dropdown-arrow {
@@ -234,9 +230,8 @@ body {
   .logo h1 {
     font-size: 1.7rem;
   }
-  .dropdown-arrow{
+  .dropdown-arrow {
     position: absolute;
     left: -1.8rem;
   }
-  
 }
