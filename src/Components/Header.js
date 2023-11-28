@@ -1,6 +1,7 @@
 import React from "react";
+import { useState } from "react";
 import SearchBar from "./SearchBar";
-
+import Cart from "./Cart";
 function Header() {
   return (
     <div className="container">
@@ -10,13 +11,7 @@ function Header() {
           <img src="./icons/megamart.svg" alt="MegaMart" />
         </div>
         <SearchBar />
-        <div className="cart-icon">
-          <img src="./icons/cart.svg" alt="cart" />
-          <div className="cart-detail">
-            <p>Cart</p>
-            <span>{3}</span>
-          </div>
-        </div>
+        <Cart />
       </div>
     </div>
   );

@@ -27,6 +27,7 @@ body {
   padding-top: 100px;
   padding-bottom: 70px;
   row-gap: 42px;
+  overflow-x: hidden;
 
 }
 
@@ -381,6 +382,13 @@ body {
     position: absolute;
     left: -1.8rem;
   }
+
+  .card{
+    width: 389px;
+    height:292px;
+  }
+  
+  
 
 
 }
