@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Components/Header";
 import Result from "./Components/Result";
+import { CartProvider } from "./Components/CartContext";
 import "./styles.css";
 
 function App() {
@@ -21,10 +22,12 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Header />
-      <Result productData={productData} />
-    </>
+    <CartProvider>
+      <>
+        <Header />
+        <Result productData={productData} />
+      </>
+    </CartProvider>
   );
 }
 

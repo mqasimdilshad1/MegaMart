@@ -16,9 +16,9 @@ const SearchBar = () => {
   const categories = [
     "All",
     "men's clothing",
-    "jewelery",
-    "electronics",
     "women's clothing",
+    "electronics",
+    "jewelery",
   ];
   return (
     <div className="search-field-container">
