@@ -5,14 +5,13 @@ import { useCart } from "./CartContext";
 function Header() {
   const { cartCount } = useCart();
 
-  useEffect(() => {
-  
-  }, [cartCount]);
+  useEffect(() => {}, [cartCount]);
 
   return (
+    <header>
     <div className="container">
       <div className="header-content">
-      <div className="logo">
+        <div className="logo">
           <h1>M</h1>
           <img src="./icons/megamart.svg" alt="MegaMart" />
         </div>
@@ -26,6 +25,7 @@ function Header() {
         </div>
       </div>
     </div>
+    </header>
   );
 }
 

@@ -17,20 +17,26 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: var(--body-background);
+  background-color: var(--white);
 }
 .container {
   padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+.result-body{
+  background-color: var(--body-background);
+  margin: 0 auto;
 }
 
 .header-content {
   height: 5.6rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
-  border-bottom: 1px solid var(--dropdown-border);
   background-color: var(--white);
 }
 
@@ -240,6 +246,7 @@ body {
 }
 .card:hover button:hover {
   background-color: var(--button-hover);
+  cursor: pointer;
 }
 .title-price-container {
   display: flex;
@@ -302,20 +309,26 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
-  padding-top: 100px;
-  padding-bottom: 70px;
+  padding-top: 30px;
+  padding-bottom: 50px;
   row-gap: 42px;
   overflow-x: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--body-background);
 }
 .result-title {
-  display: flex;
-  flex-direction: column;
   color: var(--primary);
   font-family: Inter;
   margin: 0 auto;
+  max-width: 1200px;
+  padding-top: 30px;
+}
+.result{
+  background-color: var(--body-background);
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 830px) {
   .header-content {
     border-bottom: none;
   }
@@ -351,16 +364,29 @@ body {
   }
 }
 
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 660px) {
+
   .container {
     background-color: var(--white);
+
+  }
+  .header-content{
+    justify-content: space-between;
+  }
+  .logo{
+    order: 1;
+  }
+  .cart-icon{
+    order: 2;
+  }
+  .search-field-container{
+    order: 3;
   }
 
   .header-content {
     position: relative;
     justify-content: space-between;
     background-color: white;
-    overflow: visible;
   }
 
   .search-field-container {
@@ -369,14 +395,14 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
   }
 
   .search-field {
-    width: 95%;
+    width: 100%;
     border-radius: 0;
     border-top: 2px solid var(gray);
     padding-left: 70px;
+    
   }
 
   .search-icon {
@@ -418,6 +444,7 @@ body {
   .result-body {
     display: grid;
     grid-template-columns: auto;
+    overflow-x: hidden;
   }
 
   .title-price-container {
@@ -434,6 +461,7 @@ body {
     background-color: var(--button-hover);
     border-radius: 6px;
     padding: 5px 20px 5px 20px;
+    border: none;
   }
   .rating-button-container {
     gap: 0;
@@ -443,5 +471,8 @@ body {
   }
   .title p {
     margin-left: -30px;
+  }
+  .result-title{
+    padding-top: 95px;
   }
 }

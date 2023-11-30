@@ -40,36 +40,33 @@ function Card({ product }) {
           <span>OFF</span>
         </div>
         <img src={product.image} alt={product.title} />
-        <div className="card-overlay">
-          
-        </div>
+        <div className="card-overlay"></div>
       </div>
       <div className="card-content">
         <div className="title-price-container">
-        <div className="title">
-          <p>{limitTitleWords(product.title, 2)}</p>
+          <div className="title">
+            <p>{limitTitleWords(product.title, 2)}</p>
+          </div>
+          <div className="price">
+            <p>${product.price}</p>
+          </div>
         </div>
-        <div className="price">
-          <p>${product.price}</p>
-        </div>
-        </div>
-       <div className="rating-button-container">
-       <div className="rating">
-          <Rating
-            count={5}
-            value={product.rating.rate}
-            size={24}
-            edit={false}
-            isHalf={true}
-            activeColor="#ffc915"
-          />
-        </div>
-        <button onClick={handleButtonClick}>
+        <div className="rating-button-container">
+          <div className="rating">
+            <Rating
+              count={5}
+              value={product.rating.rate}
+              size={24}
+              edit={false}
+              isHalf={true}
+              activeColor="#ffc915"
+            />
+          </div>
+          <button onClick={handleButtonClick}>
             {showCartIcon && <BsCart2 size={17} />}
             {buttonText}
           </button>
-       </div>
-        
+        </div>
       </div>
     </div>
   );
