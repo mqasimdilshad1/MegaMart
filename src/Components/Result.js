@@ -4,6 +4,7 @@ function Result({ productData }) {
   return (
     
    
+
       <div className="result-body">
       
         {productData.map((product) => (
@@ -13,7 +14,6 @@ function Result({ productData }) {
           />
         ))}
       </div>
-    
   );
 }
 export default Result;

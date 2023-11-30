@@ -9,7 +9,7 @@ function Card({ product }) {
   const [showCartIcon, setShowCartIcon] = useState(false);
 
   const toggleButtonText = () => {
-    setButtonText("View Cart");
+    setButtonText(" View Cart");
     setShowCartIcon(true);
   };
 
@@ -40,21 +40,21 @@ function Card({ product }) {
           <span>OFF</span>
         </div>
         <img src={product.image} alt={product.title} />
-        <div className="overlay">
-          <button onClick={handleButtonClick}>
-            {showCartIcon && <BsCart2 size={17} />}
-            {buttonText}
-          </button>
+        <div className="card-overlay">
+          
         </div>
       </div>
-      <div className="content">
+      <div className="card-content">
+        <div className="title-price-container">
         <div className="title">
           <p>{limitTitleWords(product.title, 2)}</p>
         </div>
         <div className="price">
           <p>${product.price}</p>
         </div>
-        <div className="rating">
+        </div>
+       <div className="rating-button-container">
+       <div className="rating">
           <Rating
             count={5}
             value={product.rating.rate}
@@ -64,6 +64,12 @@ function Card({ product }) {
             activeColor="#ffc915"
           />
         </div>
+        <button onClick={handleButtonClick}>
+            {showCartIcon && <BsCart2 size={17} />}
+            {buttonText}
+          </button>
+       </div>
+        
       </div>
     </div>
   );
