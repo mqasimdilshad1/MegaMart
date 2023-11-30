@@ -233,7 +233,7 @@ body {
   top: 30%;
   visibility: hidden;
   z-index: 2;
-  left: 23%;
+  left: 21%;
 }
 .card:hover button {
   visibility: visible;
