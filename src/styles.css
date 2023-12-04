@@ -23,11 +23,6 @@ body {
   padding: 0;
   max-width: 1200px;
   margin: 0 auto;
-  
-}
-.result-body{
-  background-color: var(--body-background);
-  margin: 0 auto;
 }
 
 .header-content {
@@ -39,6 +34,10 @@ body {
   flex-shrink: 0;
   background-color: var(--white);
 }
+.result-body{
+  background-color: var(--body-background);
+  margin: 0 auto;
+}
 
 .logo {
   fill: var(--primary);
@@ -47,6 +46,7 @@ body {
   display: flex;
   align-items: baseline;
   gap: 0.6rem;
+  order: 1;
 }
 .logo:hover {
   cursor: pointer;
@@ -75,6 +75,7 @@ body {
   align-content: baseline;
   align-items: center;
   gap: 5px;
+  order: 3;
 }
 .cart-icon:hover {
   cursor: pointer;
@@ -129,6 +130,7 @@ body {
   display: flex;
   align-items: center;
   position: relative;
+  order: 2;
 }
 
 .search-field {
@@ -142,17 +144,21 @@ body {
   border-bottom-right-radius: 10px;
   outline: none;
   font-family: Inter;
+ 
 }
 .search-field:active {
   border: none;
 }
 
 .search-icon {
-  width: 1.1rem;
+  
   height: 1.1rem;
   flex-shrink: 0;
   cursor: pointer;
   margin-left: -1.8rem;
+  position: absolute;
+  top: 1rem;
+  right: 0.5rem;
 }
 
 .dropdown-arrow:hover {
@@ -322,7 +328,7 @@ body {
   font-family: Inter;
   margin: 0 auto;
   max-width: 1200px;
-  padding-top: 30px;
+  padding-top: 120px;
 }
 .result{
   background-color: var(--body-background);
@@ -366,42 +372,32 @@ body {
 
 @media screen and (max-width: 660px) {
 
-  .container {
-    background-color: var(--white);
-
-  }
   .header-content{
     justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
   }
   .logo{
     order: 1;
+    margin-top: 30px;
   }
   .cart-icon{
     order: 2;
-  }
-  .search-field-container{
-    order: 3;
-  }
-
-  .header-content {
-    position: relative;
-    justify-content: space-between;
-    background-color: white;
+    margin-left: auto;
+    margin-top: 30px;
   }
 
   .search-field-container {
-    flex-direction: column;
-    align-items: flex-start;
-    position: absolute;
-    top: 100%;
-    left: 0;
+    order: 3;
+    width: 100%;
   }
 
   .search-field {
-    width: 100%;
     border-radius: 0;
     border-top: 2px solid var(gray);
     padding-left: 70px;
+    margin-top: 18px;
+    width: 100%;
     
   }
 
@@ -411,6 +407,7 @@ body {
     right: 0.5rem;
     cursor: pointer;
     margin-right: 0px;
+    margin-top: 16px;
   }
 
   .dropdown-content {
@@ -422,6 +419,7 @@ body {
   .dropdown-arrow {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    margin-top: -16px;
   }
 
   .logo img {
@@ -475,4 +473,5 @@ body {
   .result-title{
     padding-top: 95px;
   }
+  
 }
