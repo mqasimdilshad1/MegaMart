@@ -15,6 +15,7 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   const addToCart = (productId, buttonText) => {
+    // this if condition is for the button which has View cart state
     if (buttonText === "Add to Cart") {
       const existingCart = JSON.parse(localStorage.getItem("cartCount")) || [];
       const updatedCart = [...existingCart, { id: productId }];

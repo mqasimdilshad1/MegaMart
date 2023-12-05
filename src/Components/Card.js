@@ -8,6 +8,7 @@ function Card({ product }) {
   const [buttonText, setButtonText] = useState("Add to Cart");
   const [showCartIcon, setShowCartIcon] = useState(false);
 
+  // function to change button text when clicked
   const toggleButtonText = () => {
     setButtonText(" View Cart");
     setShowCartIcon(true);
@@ -21,7 +22,7 @@ function Card({ product }) {
     toggleButtonText();
     handleAddToCart(buttonText);
   };
-
+  //  function to limit category words
   const limitTitleWords = (title, limit) => {
     const words = title.split(" ");
 

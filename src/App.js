@@ -22,6 +22,7 @@ function App() {
   }, []);
 
   return (
+    // useContext to pass our id's from card component , local storage to header component
     <CartProvider>
       <>
         <Header />

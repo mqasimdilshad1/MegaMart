@@ -20,6 +20,7 @@ const SearchBar = () => {
     "electronics",
     "jewelery",
   ];
+
   const limitTitleWords = (title, limit) => {
     const words = title.split(" ");
 
@@ -33,7 +34,7 @@ const SearchBar = () => {
     <div className="search-field-container">
       <div className="search-dropdown">
         <div onClick={toggleDropdown} className="dropdown-arrow">
-          <span>{limitTitleWords(selectedCategory,1)} </span>
+          <span>{limitTitleWords(selectedCategory, 1)} </span>
           <img src="./icons/dropdown.svg" alt="dropdown" />
         </div>
 
