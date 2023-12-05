@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 
-const SearchBar = () => {
+const SearchBar = ({ setSearchItem }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleInputChange = (event) => {
+    setSearchItem(event.target.value);
   };
 
   const handleCategorySelect = (category) => {
@@ -55,6 +59,7 @@ const SearchBar = () => {
         type="text"
         placeholder="Search here ..."
         className="search-field"
+        onChange={handleInputChange}
       />
       <div className="search-icon">
         <img src="./icons/search.svg" alt="search" />

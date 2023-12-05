@@ -6,6 +6,12 @@ import "./styles.css";
 
 function App() {
   const [productData, setProductData] = useState([]);
+  const [searchItem, setSearchItem] = useState("");
+
+  // filter method to filter searched item
+  const filteredData = productData.filter((product) =>
+  product.title.toLowerCase().includes(searchItem.toLowerCase())
+);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,8 +31,8 @@ function App() {
     // cart provider component to pass our id's from card component , local storage to header component
     <CartProvider>
       <>
-        <Header />
-        <Result productData={productData} />
+        <Header setSearchItem={setSearchItem} />
+        <Result productData={filteredData} />
       </>
     </CartProvider>
   );
