@@ -449,6 +449,7 @@ body {
     grid-template-columns: 1fr;
     gap: 16px;
     justify-items: center;
+    row-gap: 32px;
   }
 
   .title-price-container {
@@ -478,8 +479,8 @@ body {
   }
   .result-title {
     padding-top: 70px;
-    text-align: center;
+    text-align: start;
     grid-column: span 1;
-    margin-left: 0;
+    margin-left: 40px;
   }
 }

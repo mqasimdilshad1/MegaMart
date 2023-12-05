@@ -2,10 +2,12 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 
 const CartContext = createContext();
 
+// custom hook usecart
 export const useCart = () => {
   return useContext(CartContext);
 };
 
+// cart provider component
 export const CartProvider = ({ children }) => {
   const [cartCount, setCartCount] = useState(0);
 
@@ -29,5 +31,7 @@ export const CartProvider = ({ children }) => {
     addToCart,
   };
 
-  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
+  return <CartContext.Provider value={value}>
+        {children}
+        </CartContext.Provider>;
 };
