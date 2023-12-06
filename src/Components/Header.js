@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import SearchBar from "./SearchBar";
 import { useCart } from "./CartContext";
 
-function Header({ setSearchItem, setSelectedCategory,selectedCategory }) {
+function Header({ setSearchItem, setSelectedCategory, selectedCategory }) {
   const { cartCount } = useCart();
 
   // runs when ever add to cart clicked and cartCount changed in local storage

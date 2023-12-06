@@ -27,7 +27,7 @@ const SearchBar = ({
     "electronics",
     "jewelery",
   ];
-
+  // function to limit the words in dropdown title
   const limitTitleWords = (title, limit) => {
     const words = title.split(" ");
 
@@ -46,6 +46,7 @@ const SearchBar = ({
           <img src="./icons/dropdown.svg" alt="dropdown" />
         </div>
 
+        {/* this if condition loops through catagory array and list the options when dropdown open  */}
         {isDropdownOpen && (
           <div className="dropdown-content">
             {categories.map((category) => (
