@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import SearchBar from "./SearchBar";
 import { useCart } from "./CartContext";
 
-function Header({setSearchItem}) {
+function Header({ setSearchItem, setSelectedCategory,selectedCategory }) {
   const { cartCount } = useCart();
 
   // runs when ever add to cart clicked and cartCount changed in local storage
@@ -16,7 +16,11 @@ function Header({setSearchItem}) {
             <h1>M</h1>
             <img src="./icons/megamart.svg" alt="MegaMart" />
           </div>
-          <SearchBar setSearchItem={setSearchItem} />
+          <SearchBar
+            setSearchItem={setSearchItem}
+            setSelectedCategory={setSelectedCategory}
+            selectedCategory={selectedCategory}
+          />
           <div className="cart-icon">
             <img src="./icons/cart.svg" alt="cart" />
             <div className="cart-detail">

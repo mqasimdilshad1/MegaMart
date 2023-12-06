@@ -7,12 +7,10 @@ import "./styles.css";
 function App() {
   const [productData, setProductData] = useState([]);
   const [searchItem, setSearchItem] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [filteredData, setFilteredData] = useState([]);
 
-  // filter method to filter searched item
-  const filteredData = productData.filter((product) =>
-  product.title.toLowerCase().includes(searchItem.toLowerCase())
-);
-
+  // data fetching
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -27,12 +25,38 @@ function App() {
     fetchData();
   }, []);
 
+  // search filtraion and category wise filtration in this use effect
+  useEffect(() => {
+    let filteredProducts;
+
+    if (selectedCategory === "All") {
+      filteredProducts = productData.filter((product) =>
+        product.title.toLowerCase().includes(searchItem.toLowerCase())
+      );
+    } else {
+      filteredProducts = productData.filter(
+        (product) =>
+          product.category === selectedCategory &&
+          product.title.toLowerCase().includes(searchItem.toLowerCase())
+      );
+    }
+
+    setFilteredData(filteredProducts);
+  }, [selectedCategory, searchItem, productData]);
+
   return (
     // cart provider component to pass our id's from card component , local storage to header component
     <CartProvider>
       <>
-        <Header setSearchItem={setSearchItem} />
-        <Result productData={filteredData} />
+        <Header
+          setSearchItem={setSearchItem}
+          setSelectedCategory={setSelectedCategory}
+          selectedCategory={selectedCategory}
+        />
+        <Result
+          productData={filteredData}
+          selectedCategory={selectedCategory}
+        />
       </>
     </CartProvider>
   );

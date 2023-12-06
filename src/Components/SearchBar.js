@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 
-const SearchBar = ({ setSearchItem }) => {
+const SearchBar = ({
+  setSearchItem,
+  setSelectedCategory,
+  selectedCategory,
+}) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState("All");
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
 
-  const handleInputChange = (event) => {
-    setSearchItem(event.target.value);
-  };
-
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
     setDropdownOpen(false);
+  };
+
+  const handleInputChange = (event) => {
+    setSearchItem(event.target.value);
   };
 
   const categories = [
@@ -34,6 +37,7 @@ const SearchBar = ({ setSearchItem }) => {
 
     return title;
   };
+
   return (
     <div className="search-field-container">
       <div className="search-dropdown">
