@@ -64,7 +64,7 @@ function Card({ product }) {
             />
           </div>
           <button onClick={handleButtonClick}>
-            {showCartIcon && <BsCart2 size={17} />}
+            {showCartIcon && <BsCart2 size={13} />}
             {buttonText}
           </button>
         </div>
