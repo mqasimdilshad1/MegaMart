@@ -17,7 +17,8 @@ const SearchBar = ({
   };
 
   const handleInputChange = (event) => {
-    setSearchItem(event.target.value);
+    const trimmed = event.target.value.trim();
+    setSearchItem(trimmed);
   };
 
   const categories = [
