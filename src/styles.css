@@ -45,7 +45,6 @@ header {
   padding-top: 30px;
   padding-bottom: 50px;
   row-gap: 42px;
-  overflow-x: hidden;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -407,7 +406,7 @@ header {
   .search-field {
     border-radius: 0;
     border-top: 2px solid var(gray);
-    padding-left: 28px;
+    padding-left: 30px;
     margin-top: 18px;
     width: 100%;
   }
@@ -432,6 +431,7 @@ header {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     margin-top: -16px;
+    margin-left: -10px;
   }
 
   .logo img {
