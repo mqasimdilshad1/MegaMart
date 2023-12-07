@@ -46,6 +46,7 @@ body {
   overflow-x: hidden;
   max-width: 1200px;
   margin: 0 auto;
+  
 }
 
 .logo {
@@ -196,7 +197,7 @@ body {
   width: 100%;
   overflow: hidden;
   position: relative;
-  background-color: var(--card-background);
+  background-color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -261,6 +262,9 @@ body {
   background-color: var(--button-hover);
   cursor: pointer;
 }
+.card button:focus{
+  outline: none;
+}
 .title-price-container {
   display: flex;
   flex-direction: column;
@@ -277,7 +281,7 @@ body {
   font-family: Inter;
   display: flex;
   flex-direction: column;
-  background-color: var(--white);
+  background-color: var(--card-background);
 }
 
 .title p {
@@ -327,6 +331,8 @@ body {
 }
 .result {
   background-color: var(--body-background);
+  height: 100vh;
+  
 }
 
 @media screen and (max-width: 1024px) {
@@ -420,6 +426,7 @@ body {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     margin-top: -16px;
+    
   }
 
   .logo img {
@@ -468,6 +475,7 @@ body {
     border-radius: 6px;
     padding: 5px 20px 5px 20px;
     border: none;
+    outline: none;
   }
   .rating-button-container {
     gap: 0;
