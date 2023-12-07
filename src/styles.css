@@ -156,7 +156,7 @@ body {
   background-color: var(--searchbar-background);
   font-size: medium;
   border: none;
-  padding-right: 8.2rem;
+  padding-right: 12.2rem;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   outline: none;
