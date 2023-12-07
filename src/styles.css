@@ -21,8 +21,6 @@ body {
   background-color: var(--white);
 }
 
-
-
 .container {
   padding: 0;
   max-width: 1200px;
@@ -49,7 +47,6 @@ body {
   overflow-x: hidden;
   max-width: 1200px;
   margin: 0 auto;
-  
 }
 
 .logo {
@@ -74,10 +71,9 @@ body {
   font-weight: 700;
   line-height: normal;
   margin: 0;
-  background-color:var(--logo-text-background);
+  background-color: var(--logo-text-background);
   padding-left: 3px;
   padding-right: 3px;
-  
 }
 .logo img {
   height: 1.7rem;
@@ -193,7 +189,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 8px;
   width: 14.1rem;
-  height: 17.7rem;
+  height: 18rem;
   box-shadow: 0 4px 8px var(--card-shadow);
   overflow: hidden;
   border-radius: 16px;
@@ -202,6 +198,7 @@ body {
 
 .image {
   width: 100%;
+  height: 72%;
   overflow: hidden;
   position: relative;
   background-color: var(--white);
@@ -277,6 +274,7 @@ body {
 .title-price-container {
   display: flex;
   flex-direction: column;
+  
 }
 .rating-button-container {
   display: flex;
@@ -286,21 +284,21 @@ body {
 
 .card-content {
   padding-left: 20px;
-  height: 21.8rem;
   font-family: Inter;
   display: flex;
   flex-direction: column;
   background-color: var(--card-background);
+  
 }
 
 .title p {
   font-size: 1rem;
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 0;
   font-family: Inter;
 }
 
 .price p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--heading);
   margin-bottom: 0;
   margin-top: 5px;
@@ -341,7 +339,6 @@ body {
 .result {
   background-color: var(--body-background);
   height: 100vh;
-  
 }
 
 @media screen and (max-width: 1024px) {
@@ -435,7 +432,6 @@ body {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     margin-top: -16px;
-    
   }
 
   .logo img {
