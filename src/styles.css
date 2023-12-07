@@ -17,9 +17,11 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--body-background);
+}
+header {
   background-color: var(--white);
 }
-
 .container {
   padding: 0;
   max-width: 1200px;
@@ -274,7 +276,6 @@ body {
 .title-price-container {
   display: flex;
   flex-direction: column;
-  
 }
 .rating-button-container {
   display: flex;
@@ -288,7 +289,6 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--searchbar-background);
-  
 }
 
 .title p {
