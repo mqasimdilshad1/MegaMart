@@ -34,19 +34,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-shrink: 0;
   background-color: var(--white);
-}
-.result-body {
-  background-color: var(--body-background);
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
-  padding-top: 30px;
-  padding-bottom: 50px;
-  row-gap: 42px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .logo {
@@ -57,6 +45,7 @@ header {
   align-items: baseline;
   gap: 0.6rem;
   order: 1;
+  flex-basis: 25%;
 }
 .logo:hover {
   cursor: pointer;
@@ -67,49 +56,52 @@ header {
   text-align: center;
   font-family: Inter;
   font-size: 2.2rem;
-  font-style: normal;
   font-weight: 700;
   line-height: normal;
   margin: 0;
   background-color: var(--logo-text-background);
-  padding-left: 3px;
-  padding-right: 3px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 10px;
 }
 .logo img {
   height: 1.7rem;
   width: 8.6rem;
 }
 
-.cart-icon {
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  display: flex;
-  justify-content: baseline;
-  align-content: baseline;
-  align-items: center;
-  gap: 5px;
-  order: 3;
-}
-.cart-icon:hover {
-  cursor: pointer;
-}
-.cart-detail {
+.search-field-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.3rem;
+  order: 2;
+  justify-content: space-between;
+  background-color: var(--searchbar-background);
+  border-radius: 10px;
+  position: relative;
+  flex-basis: 50%;
 }
-.cart-detail span {
-  padding: 0.2rem 0.5rem;
-  border-radius: 70%;
-  background-color: var(--primary);
-  color: var(--white);
-  font-size: smaller;
-}
-.cart-detail p {
+
+.search-field {
+  height: 3rem;
+  flex-shrink: 0;
+  background-color: transparent;
+  font-size: medium;
+  border: none;
+  outline: none;
   font-family: Inter;
-  font-weight: bold;
-  font-size: small;
+  flex-basis: 65%;
+}
+.search-field:active {
+  border: none;
+}
+
+.search-icon {
+  height: 1.1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  flex-basis: 10%;
+  justify-content: end;
 }
 
 .dropdown-content {
@@ -139,39 +131,6 @@ header {
   color: var(--heading);
 }
 
-.search-field-container {
-  display: flex;
-  align-items: center;
-  position: relative;
-  order: 2;
-}
-
-.search-field {
-  height: 3rem;
-  flex-shrink: 0;
-  background-color: var(--searchbar-background);
-  font-size: medium;
-  border: none;
-  padding-right: 12.2rem;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  outline: none;
-  font-family: Inter;
-}
-.search-field:active {
-  border: none;
-}
-
-.search-icon {
-  height: 1.1rem;
-  flex-shrink: 0;
-  cursor: pointer;
-  margin-left: -1.8rem;
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-}
-
 .dropdown-arrow:hover {
   cursor: pointer;
 }
@@ -182,6 +141,39 @@ header {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   font-family: Inter;
+  flex-basis: 30%;
+}
+
+.cart-icon {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+  order: 3;
+  flex-basis: 20%;
+}
+.cart-icon:hover {
+  cursor: pointer;
+}
+.cart-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+.cart-detail span {
+  padding: 0.2rem 0.5rem;
+  border-radius: 70%;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: smaller;
+}
+.cart-detail p {
+  font-family: Inter;
+  font-weight: bold;
+  font-size: small;
 }
 
 .card {
@@ -327,6 +319,12 @@ header {
 .card:hover .card-overlay {
   opacity: 1;
 }
+
+.result {
+  background-color: var(--body-background);
+  height: 100vh;
+}
+
 .result-title {
   color: var(--primary);
   font-family: Inter;
@@ -335,25 +333,49 @@ header {
   padding-top: 30px;
   grid-column: span 5;
 }
-.result {
+
+.result-body {
   background-color: var(--body-background);
-  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  row-gap: 42px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 1024px) {
-  .header-content {
-    border-bottom: none;
-  }
   .container {
     border-bottom: 1px solid var(--dropdown-border);
-    padding: 0 30px 0 30px;
     background-color: var(--white);
   }
-  .search-field {
-    padding-right: 0rem;
+  .logo {
+    flex-basis: 25%;
+    padding-left: 30px;
   }
+  .search-field-container {
+    flex-basis: 60%;
+  }
+  .cart-icon {
+    flex-basis: 20%;
+    padding-right: 30px;
+  }
+
   .dropdown-arrow {
     padding: 0.95rem;
+    display: flex;
+    flex-basis: 15%;
+    flex-wrap: nowrap;
+    gap: 5px;
+  }
+  .search-field {
+    flex-basis: 60%;
+  }
+  .search-icon {
+    flex-basis: 10%;
+    justify-content: end;
   }
   .dropdown-content {
     width: 50%;
@@ -383,55 +405,50 @@ header {
 }
 
 @media screen and (max-width: 630px) {
+  
   .header-content {
-    justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
+    display: flex;
+    flex-wrap: wrap;
   }
   .logo {
     order: 1;
-    margin-top: 30px;
+    flex-basis: 30%;
+    margin-top: 25px;
+    padding-left: 20px;
   }
   .cart-icon {
     order: 2;
-    margin-left: auto;
-    margin-top: 30px;
+    flex-basis: 30%;
+    margin-top: 25px;
+    padding-right: 20px;
   }
 
   .search-field-container {
     order: 3;
-    width: 100%;
+    flex-basis: 100%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 48px;
+    margin-top: 25px;
+    margin-left: 0;
   }
 
   .search-field {
     border-radius: 0;
     border-top: 2px solid var(gray);
-    padding-left: 30px;
-    margin-top: 18px;
-    width: 100%;
-  }
-
-  .search-icon {
-    position: absolute;
-    top: 1rem;
-    right: 0.5rem;
-    cursor: pointer;
-    margin-right: 0px;
-    margin-top: 16px;
   }
 
   .dropdown-content {
     width: 100%;
-    justify-content: space-between;
     top: 100%;
     z-index: 3;
   }
 
   .dropdown-arrow {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-top: -16px;
-    margin-left: -10px;
+    padding: 0.5rem;
   }
 
   .logo img {
@@ -441,10 +458,6 @@ header {
 
   .logo h1 {
     font-size: 1.7rem;
-  }
-  .dropdown-arrow {
-    position: absolute;
-    left: -1.8rem;
   }
 
   .card {
@@ -495,5 +508,8 @@ header {
     text-align: start;
     grid-column: span 1;
     margin-left: 40px;
+  }
+  .result {
+    display: grid;
   }
 }

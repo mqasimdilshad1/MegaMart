@@ -33,7 +33,7 @@ const SearchBar = ({
     const words = title.split(" ");
 
     if (words.length > limit) {
-      return words.slice(0, limit).join(" ") + "...";
+      return words.slice(0, limit).join(" ")+"...";
     }
 
     return title;
@@ -41,7 +41,6 @@ const SearchBar = ({
 
   return (
     <div className="search-field-container">
-      <div className="search-dropdown">
         <div onClick={toggleDropdown} className="dropdown-arrow">
           <span>{limitTitleWords(selectedCategory, 1)} </span>
           <img src="./icons/dropdown.svg" alt="dropdown" />
@@ -60,7 +59,6 @@ const SearchBar = ({
             ))}
           </div>
         )}
-      </div>
       <input
         type="text"
         placeholder="Search here ..."
