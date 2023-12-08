@@ -33,7 +33,7 @@ const SearchBar = ({
     const words = title.split(" ");
 
     if (words.length > limit) {
-      return words.slice(0, limit).join(" ")+"...";
+      return words.slice(0, limit).join(" ") + "...";
     }
 
     return title;
@@ -41,24 +41,24 @@ const SearchBar = ({
 
   return (
     <div className="search-field-container">
-        <div onClick={toggleDropdown} className="dropdown-arrow">
-          <span>{limitTitleWords(selectedCategory, 1)} </span>
-          <img src="./icons/dropdown.svg" alt="dropdown" />
-        </div>
+      <div onClick={toggleDropdown} className="dropdown-arrow">
+        <span>{limitTitleWords(selectedCategory, 1)} </span>
+        <img src="./icons/dropdown.svg" alt="dropdown" />
+      </div>
 
-        {/* this if condition loops through catagory array and list the options when dropdown open  */}
-        {isDropdownOpen && (
-          <div className="dropdown-content">
-            {categories.map((category) => (
-              <option
-                key={category}
-                onClick={() => handleCategorySelect(category)}
-              >
-                {category}
-              </option>
-            ))}
-          </div>
-        )}
+      {/* this if condition loops through catagory array and list the options when dropdown open  */}
+      {isDropdownOpen && (
+        <div className="dropdown-content">
+          {categories.map((category) => (
+            <option
+              key={category}
+              onClick={() => handleCategorySelect(category)}
+            >
+              {category}
+            </option>
+          ))}
+        </div>
+      )}
       <input
         type="text"
         placeholder="Search here ..."

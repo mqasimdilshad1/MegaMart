@@ -405,7 +405,6 @@ header {
 }
 
 @media screen and (max-width: 630px) {
-  
   .header-content {
     align-items: center;
     display: flex;
