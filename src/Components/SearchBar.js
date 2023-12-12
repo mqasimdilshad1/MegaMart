@@ -40,17 +40,22 @@ const SearchBar = ({
   };
 
   return (
-    <div className="search-field-container">
-      <div onClick={toggleDropdown} className="dropdown-arrow">
+    <div className="flex items-center order-2 justify-between bg-searchbar-background rounded-[10px] relative 
+    basis-[50%]">
+      <div
+        onClick={toggleDropdown}
+        className="flex gap-[5px] hover:cursor-pointer bg-searchbar-background p-[0.95rem] rounded-tl-[10px] rounded-bl-[10px] font-Inter basis-[30%]"
+      >
         <span>{limitTitleWords(selectedCategory, 1)} </span>
         <img src="./icons/dropdown.svg" alt="dropdown" />
       </div>
 
       {/* this if condition loops through catagory array and list the options when dropdown open  */}
       {isDropdownOpen && (
-        <div className="dropdown-content">
+        <div className="block absolute top-full left-0 w-[40%] bg-white border border-solid border-dropdown-border text-text font-Inter">
           {categories.map((category) => (
             <option
+              className="bg-card-border cursor-pointer border-b-[1px] border-solid border-dropdown-border text-heading font-Inter hover:bg-card-border hover:cursor-pointer hover:border-b-[1px] hover:border-solid hover:border-dropdown-border hover:text-heading hover:bg-dropdown-border"
               key={category}
               onClick={() => handleCategorySelect(category)}
             >
@@ -62,10 +67,10 @@ const SearchBar = ({
       <input
         type="text"
         placeholder="Search here ..."
-        className="search-field"
+        className="h-[3rem] shrink-0 bg-transparent text-[medium] border-none font-Inter basis-[65%] focus:outline-none"
         onChange={handleInputChange}
       />
-      <div className="search-icon">
+      <div className="h-[1.1rem] shrink-0 cursor-pointer basis-[10%] justify-end">
         <img src="./icons/search.svg" alt="search" />
       </div>
     </div>
