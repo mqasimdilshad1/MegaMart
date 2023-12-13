@@ -52,10 +52,10 @@ const SearchBar = ({
 
       {/* this if condition loops through catagory array and list the options when dropdown open  */}
       {isDropdownOpen && (
-        <div className="block absolute top-full left-0 w-[40%] bg-white border border-solid border-dropdown-border text-text font-Inter">
+        <div className="block absolute top-full left-0 w-[40%] bg-white border border-solid border-dropdown-border text-text font-Inter z-[3]">
           {categories.map((category) => (
             <option
-              className="bg-card-border cursor-pointer border-b-[1px] border-solid border-dropdown-border text-heading font-Inter hover:bg-card-border hover:cursor-pointer hover:border-b-[1px] hover:border-solid hover:border-dropdown-border hover:text-heading hover:bg-dropdown-border"
+              className="bg-card-border cursor-pointer border-b-[1px] border-solid border-dropdown-border text-heading font-Inter  hover:cursor-pointer hover:border-b-[1px] hover:border-solid hover:border-dropdown-border hover:text-heading hover:bg-dropdown-border"
               key={category}
               onClick={() => handleCategorySelect(category)}
             >

@@ -13,11 +13,11 @@ function Header({ setSearchItem, setSelectedCategory, selectedCategory }) {
       {/* container */}
       <div className="p-0 max-w-[1200px] mx-auto"> 
       {/* header content */}
-        <div className="h-[5.6rem] flex-row justify-between items-center bg-white flex  ">
+        <div className="h-[5.6rem] flex-row justify-between items-center bg-white flex ">
           {/* logo */}
           <div className="fill-primary text-primary w-[8.6rem] h-[1.7rem] flex items-baseline gap-[0.6rem] order-1 basis-[25%] hover:cursor-pointer mb-[20px]">
             {/* logo h1 */}
-            <h1 className="text-primary text-center font-Inter text-[2.2rem] font-bold leading-normal m-0 bg-logo-text-background pl-[7.5px] pr-[7.5px] pt-[2px] pb-[2px] rounded-[10px]">M</h1>
+            <h1 className="text-primary text-center font-Inter text-[2.2rem] font-bold leading-normal m-0 bg-logo-text-background pl-[9.5px] pr-[9.5px] pt-[0px] pb-[0px] rounded-[10px]">M</h1>
             <img className="h-[1.7rem] w-[8.6rem] " src="./icons/megamart.svg" alt="MegaMart" />
           </div>
           <SearchBar
