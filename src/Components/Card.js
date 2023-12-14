@@ -22,16 +22,6 @@ function Card({ product }) {
     toggleButtonText();
     handleAddToCart(buttonText);
   };
-  //  function to limit category words
-  const limitTitleWords = (title, limit) => {
-    const words = title.split(" ");
-
-    if (words.length > limit) {
-      return words.slice(0, limit).join(" ") + "...";
-    }
-
-    return title;
-  };
 
   return (
     <div className="card">
@@ -46,7 +36,7 @@ function Card({ product }) {
       <div className="card-content">
         <div className="title-price-container">
           <div className="title">
-            <p>{limitTitleWords(product.title, 2)}</p>
+            <p>{product.title}</p>
           </div>
           <div className="price">
             <p>${product.price}</p>
