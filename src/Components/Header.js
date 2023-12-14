@@ -15,9 +15,9 @@ function Header({ setSearchItem, setSelectedCategory, selectedCategory }) {
         {/* header content */}
         <div className="h-[5.6rem] flex justify-between items-center lg:bg-white flex-wrap">
           {/* logo */}
-          <div className="fill-primary text-primary lg:w-[8.6rem] lg:h-[1.7rem] flex items-baseline gap-[0.6rem] order-1 lg:basis-[25%] hover:cursor-pointer lg:mb-[20px] md:basis-[25%] md:pl-[30px] basis-[30%] mt-[25px] pl-[20px] w-[6.6rem]">
+          <div className="fill-primary text-primary lg:w-[8.6rem] lg:h-[2rem]  flex items-baseline gap-[0.6rem] order-1 lg:basis-[25%] hover:cursor-pointer lg:mb-[20px] md:basis-[25%] md:pl-[30px] basis-[30%] mt-[25px] pl-[20px] w-[6.6rem] ">
             {/* logo h1 */}
-            <h1 className="text-primary text-center font-Inter lg:text-[2.2rem] font-bold leading-normal m-0 bg-logo-text-background lg:pl-[9.5px] lg:pr-[9.5px] rounded-[10px] md:text-[1.7rem] text-[1.7rem] pl-[6.5px] pr-[6.5px] pt-[0px] pb-[0px] ">
+            <h1 className="text-primary text-center font-Inter lg:text-[2rem] font-bold leading-normal m-0 bg-logo-text-background lg:pl-[9.5px] lg:pr-[9.5px] lg:pb-[0] rounded-[10px] md:text-[1.7rem] text-[1.7rem] pl-[6.5px] pr-[6.5px] pt-[0px] pb-[0px] ">
               M
             </h1>
             <img

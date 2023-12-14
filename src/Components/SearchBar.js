@@ -46,7 +46,7 @@ const SearchBar = ({
     >
       <div
         onClick={toggleDropdown}
-        className="flex gap-[5px] hover:cursor-pointer bg-searchbar-background lg:p-[0.95rem] lg:rounded-tl-[10px] lg:rounded-bl-[10px] font-Inter lg:basis-[30%] md:p-[0.95rem] md:flex md:basis-[15%] md:flex-nowrap md:gap-[5px] p-[0.5rem]"
+        className="flex gap-[5px] hover:cursor-pointer bg-searchbar-background lg:p-[0.7rem] lg:rounded-tl-[10px] lg:rounded-bl-[10px] font-Inter lg:basis-[30%] md:p-[0.95rem] md:flex md:basis-[15%] md:flex-nowrap md:gap-[5px] p-[0.5rem]"
       >
         <span>{limitTitleWords(selectedCategory, 1)} </span>
         <img src="./icons/dropdown.svg" alt="dropdown" />
