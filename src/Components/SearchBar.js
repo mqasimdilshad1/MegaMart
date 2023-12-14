@@ -41,12 +41,12 @@ const SearchBar = ({
 
   return (
     <div
-      className="flex items-center order-2 justify-between bg-searchbar-background rounded-[10px] relative 
-      basis-[50%] md:basis-[60%] sm:order-3 sm:basis-[100%] sm:rounded-tr-[0] sm:rounded-br-[0] sm:rounded-tl-[0] sm:rounded-bl-[0] sm:h-[48px] sm:mt-[20px] sm:ml-[0]"
+      className="flex items-center lg:order-2 justify-between bg-searchbar-background lg:rounded-[10px] relative 
+      lg:basis-[50%] md:basis-[60%] order-3 basis-[100%] rounded-tr-[0] rounded-br-[0] rounded-tl-[0] rounded-bl-[0] h-[48px] mt-[20px] ml-[0]"
     >
       <div
         onClick={toggleDropdown}
-        className="flex gap-[5px] hover:cursor-pointer bg-searchbar-background p-[0.95rem] rounded-tl-[10px] rounded-bl-[10px] font-Inter basis-[30%] md:p-[0.95rem] md:flex md:basis-[15%] md:flex-nowrap md:gap-[5px] sm:p-[0.5rem]"
+        className="flex gap-[5px] hover:cursor-pointer bg-searchbar-background lg:p-[0.95rem] lg:rounded-tl-[10px] lg:rounded-bl-[10px] font-Inter lg:basis-[30%] md:p-[0.95rem] md:flex md:basis-[15%] md:flex-nowrap md:gap-[5px] p-[0.5rem]"
       >
         <span>{limitTitleWords(selectedCategory, 1)} </span>
         <img src="./icons/dropdown.svg" alt="dropdown" />
@@ -54,7 +54,7 @@ const SearchBar = ({
 
       {/* this if condition loops through catagory array and list the options when dropdown open  */}
       {isDropdownOpen && (
-        <div className="block absolute top-full left-0 w-[40%] bg-white border border-solid border-dropdown-border text-text font-Inter z-[3] md:w-[50%] sm:w-[100%] sm:top-[100%] sm:z-[3]">
+        <div className="block absolute top-full lg:left-0 lg:w-[40%] bg-white border border-solid border-dropdown-border text-text font-Inter lg:z-[3] md:w-[50%] w-[100%] z-[3]">
           {categories.map((category) => (
             <option
               className="bg-card-border cursor-pointer border-b-[1px] border-solid border-dropdown-border text-heading font-Inter  hover:cursor-pointer hover:border-b-[1px] hover:border-solid hover:border-dropdown-border hover:text-heading hover:bg-dropdown-border"
@@ -69,7 +69,7 @@ const SearchBar = ({
       <input
         type="text"
         placeholder="Search here ..."
-        className="h-[3rem] shrink-0 bg-transparent text-[medium] border-none font-Inter basis-[65%] focus:outline-none md:basis-[60%] sm:rounded-[0] sm:rounded-t-[2px] "
+        className="h-[3rem] shrink-0 bg-transparent text-[medium] border-none font-Inter lg:basis-[65%] focus:outline-none md:basis-[60%] rounded-[0] rounded-t-[2px] "
         onChange={handleInputChange}
       />
       <div className="h-[1.1rem] shrink-0 cursor-pointer basis-[10%] justify-end md:basis-[10%] md:justify-end">
