@@ -15,7 +15,7 @@ function Header({ setSearchItem, setSelectedCategory, selectedCategory }) {
         {/* header content */}
         <div className="h-[5.6rem] flex justify-between items-center lg:bg-white flex-wrap">
           {/* logo */}
-          <div className="fill-primary text-primary lg:w-[8.6rem] lg:h-[2rem]  flex items-baseline gap-[0.6rem] order-1 lg:basis-[25%] hover:cursor-pointer lg:mb-[20px] md:basis-[25%] md:pl-[30px] basis-[30%] mt-[25px] pl-[20px] w-[6.6rem] ">
+          <div className="fill-primary text-primary lg:w-[10.6rem] lg:h-[2rem]  flex items-baseline gap-[0.6rem] order-1 lg:basis-[30%] hover:cursor-pointer lg:mb-[20px] md:basis-[25%] md:pl-[30px] basis-[30%] mt-[25px] pl-[30px] w-[6.6rem] lg:pl-[8px] ">
             {/* logo h1 */}
             <h1 className="text-primary text-center font-Inter lg:text-[2rem] font-bold leading-normal m-0 bg-logo-text-background lg:pl-[9.5px] lg:pr-[9.5px] lg:pb-[0] rounded-[10px] md:text-[1.7rem] text-[1.7rem] pl-[6.5px] pr-[6.5px] pt-[0px] pb-[0px] ">
               M
@@ -32,7 +32,7 @@ function Header({ setSearchItem, setSelectedCategory, selectedCategory }) {
             selectedCategory={selectedCategory}
           />
           {/* cart icon */}
-          <div className="min-w-[1.5rem] min-h-[1.5rem] flex justify-end items-center gap-[5px] lg:order-3 lg:basis-1/5 hover:cursor-pointer md:basis-[20%] md:pr-[30px] order-2 basis-[30%] mt-[25px] pr-[20px] ">
+          <div className="min-w-[1.5rem] min-h-[1.5rem] flex justify-end items-center gap-[5px] lg:order-3 lg:basis-1/5 hover:cursor-pointer md:basis-[20%] md:pr-[30px] order-2 basis-[30%] mt-[25px] pr-[30px] lg:mb-[10px] lg:pr-[8px] ">
             <img src="./icons/cart.svg" alt="cart" />
             {/* cart detail */}
             <div className="flex items-center justify-center gap-[0.3rem]">

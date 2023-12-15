@@ -40,13 +40,10 @@ const SearchBar = ({
   };
 
   return (
-    <div
-      className="flex items-center lg:order-2 justify-between bg-searchbar-background lg:rounded-[10px] relative 
-      lg:basis-[50%] md:basis-[60%] order-3 basis-[100%] rounded-tr-[0] rounded-br-[0] rounded-tl-[0] rounded-bl-[0] h-[48px] mt-[20px] ml-[0]"
-    >
+    <div className="flex items-center lg:order-2 justify-between bg-searchbar-background lg:rounded-[10px] relative md:rounded-[10px] lg:basis-[50%] lg:mb-[10px] md:basis-[50%] order-3 basis-[100%] rounded-tr-[0] rounded-br-[0] rounded-tl-[0] rounded-bl-[0] h-[48px] mt-[20px] ml-[0] md:order-2 md:">
       <div
         onClick={toggleDropdown}
-        className="flex gap-[5px] hover:cursor-pointer bg-searchbar-background lg:p-[0.7rem] lg:rounded-tl-[10px] lg:rounded-bl-[10px] font-Inter lg:basis-[30%] md:p-[0.95rem] md:flex md:basis-[15%] md:flex-nowrap md:gap-[5px] p-[0.5rem]"
+        className="flex gap-[5px] hover:cursor-pointer bg-searchbar-background lg:p-[0.7rem] md:p-[0.7rem] lg:rounded-tl-[10px] lg:rounded-bl-[10px] md:rounded-tl-[10px] md:rounded-bl-[10px] font-Inter lg:basis-[30%] md:flex md:basis-[15%] md:flex-nowrap md:gap-[5px] p-[0.5rem]"
       >
         <span>{limitTitleWords(selectedCategory, 1)} </span>
         <img src="./icons/dropdown.svg" alt="dropdown" />

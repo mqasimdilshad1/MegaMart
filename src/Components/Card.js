@@ -10,7 +10,7 @@ function Card({ product }) {
 
   // function to change button text when clicked
   const toggleButtonText = () => {
-    setButtonText(" View Cart");
+    setButtonText("View Cart");
     setShowCartIcon(true);
   };
 
@@ -26,7 +26,7 @@ function Card({ product }) {
   return (
     // card
     <div
-      className="lg:relative rounded-[16px] lg:w-[14.1rem] lg:h-[18rem] overflow-hidden box-border 
+      className="lg:relative md:relative rounded-[16px] lg:w-[14.1rem] lg:h-[18rem] overflow-hidden box-border 
    shadow-card-shadow border border-solid shadow-lg border-gray-300 group md:w-[14.1rem] md:h-[17.7rem] w-[18.7rem] h-[18.2rem]"
     >
       {/* image */}
@@ -47,16 +47,16 @@ function Card({ product }) {
       {/* card content */}
       <div className="pl-[20px] font-Inter flex-col bg-searchbar-background ">
         {/* title price container */}
-        <div className="lg:flex-col flex items-center justify-around mb-[10px] ">
+        <div className="lg:flex-col md:flex-col flex items-center justify-around mb-[10px] lg:items-start lg:mb-[-1px] md:items-start md:mb-[-3px] ">
           {/* title */}
           <div>
-            <p className="text-[1rem] font-Inter whitespace-nowrap overflow-hidden text-ellipsis max-w-[150px] ml-[-30px] mt-2 ">
+            <p className="text-[1rem] font-Inter whitespace-nowrap overflow-hidden text-ellipsis max-w-[150px] ml-[-30px] mt-2 lg:mt-[0.1rem] lg:ml-[0px] md:mt-[0.1rem] md:ml-[0px] ">
               {product.title}
             </p>
           </div>
           {/* price */}
           <div>
-            <p className="text-[0.9rem] text-heading mb-0 lg:mt-[5px] font-bold mt-[12px] ">
+            <p className="text-[0.9rem] text-heading mb-0  lg:mt-[5px]  md:mt-[5px] font-bold mt-[5px] ">
               ${product.price}
             </p>
           </div>
@@ -75,9 +75,9 @@ function Card({ product }) {
             />
           </div>
           <button
-            className="lg:bg-white md:bg-white pt-[6px] pr-[23px] pb-[6px] pl-[23px] border-none 
-         text-[0.9rem] font-Inter font-[500] outline-none lg:absolute md:absolute top-[30%] lg:invisible md:invisible z-[2] left-[21%]
-         w-[132px] lg:group-hover:visible hover:bg-button-hover focus:flex-row focus:items-baseline relative visible ml-[-30px] bg-button-hover rounded-[6px] p-x-[20px] p-y-[5px] mb-1 "
+            className="lg:bg-white md:bg-white flex items-center gap-[3px] pt-[6px] pr-[23px] pb-[6px] pl-[23px] border-none 
+            text-[0.9rem] font-Inter font-[500] outline-none lg:absolute md:absolute top-[30%] lg:invisible md:invisible z-[2] lg:left-[34%] md:left-[34%] left-[21%]
+            w-[132px] lg:group-hover:visible md:group-hover:visible hover:bg-button-hover focus:flex-row focus:items-baseline relative visible ml-[-30px] bg-button-hover rounded-[6px] p-x-[20px] p-y-[5px] mb-1 whitespace-nowrap"
             onClick={handleButtonClick}
           >
             {showCartIcon && <BsCart2 size={13} />}
