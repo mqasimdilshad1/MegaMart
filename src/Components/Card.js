@@ -27,7 +27,7 @@ function Card({ product }) {
     // card
     <div
       className="lg:relative md:relative rounded-[16px] lg:w-[14.1rem] lg:h-[18rem] overflow-hidden box-border 
-   shadow-card-shadow border border-solid shadow-lg border-gray-300 group md:w-[14.1rem] md:h-[17.7rem] w-[18.7rem] h-[18.2rem]"
+      shadow-card-shadow border border-solid shadow-lg border-gray-300 group md:w-[14.1rem] md:h-[17.7rem] [18.7rem] h-[18.2rem]"
     >
       {/* image */}
       <div className="w-[100%] h-[72%] overflow-hidden relative bg-white flex justify-center items-center      ">
