@@ -24,14 +24,11 @@ function Card({ product }) {
   };
 
   return (
-    // card
     <div
       className="lg:relative md:relative rounded-[16px] lg:w-[14.1rem] lg:h-[18rem] overflow-hidden box-border 
       shadow-card-shadow border border-solid shadow-lg border-gray-300 group md:w-[14.1rem] md:h-[17.7rem] [18.7rem] h-[18.2rem]"
     >
-      {/* image */}
       <div className="w-[100%] h-[72%] overflow-hidden relative bg-white flex justify-center items-center      ">
-        {/* sales-tag */}
         <div className="absolute flex top-[-8px] right-[-13px] bg-primary text-white pt-[20px] pr-[33px] pb-[6px] pl-[10px] rounded-[10px] text-[14px] font-Inter flex-col items-end justify-end z-[1]">
           <span>{56}%</span>
           <span>OFF</span>
@@ -41,29 +38,22 @@ function Card({ product }) {
           src={product.image}
           alt={product.title}
         />
-        {/* card-overlay */}
         <div className="absolute top-0 left-0 w-[100%] h-[100%] bg-overlay opacity-0 flex justify-center items-center pointer-events-none group-hover:opacity-[1] z-[2]"></div>
       </div>
-      {/* card content */}
       <div className="pl-[20px] font-Inter flex-col bg-searchbar-background ">
-        {/* title price container */}
         <div className="lg:flex-col md:flex-col flex items-center justify-around mb-[10px] lg:items-start lg:mb-[-1px] md:items-start md:mb-[-3px] ">
-          {/* title */}
           <div>
             <p className="text-[1rem] font-Inter whitespace-nowrap overflow-hidden text-ellipsis max-w-[150px] ml-[-30px] mt-2 lg:mt-[0.1rem] lg:ml-[0px] md:mt-[0.1rem] md:ml-[0px] ">
               {product.title}
             </p>
           </div>
-          {/* price */}
           <div>
             <p className="text-[0.9rem] text-heading mb-0  lg:mt-[5px]  md:mt-[5px] font-bold mt-[5px] ">
               ${product.price}
             </p>
           </div>
         </div>
-        {/* rating button container */}
         <div className="flex gap-0 ">
-          {/* rating */}
           <div className="mt-0">
             <Rating
               count={5}
