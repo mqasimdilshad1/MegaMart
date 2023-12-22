@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Rating from "react-rating-stars-component";
 import { BsCart2 } from "react-icons/bs";
-import { useCart } from "./CartContext";
+import { useCart } from './CartStore';
 
 function Card({ product }) {
   const { addToCart } = useCart();

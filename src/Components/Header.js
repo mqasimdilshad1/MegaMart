@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import SearchBar from "./SearchBar";
-import { useCart } from "./CartContext";
+import { useCart } from "./CartStore";
 
 function Header({ setSearchItem, setSelectedCategory, selectedCategory }) {
   const { cartCount } = useCart();
@@ -32,7 +32,7 @@ function Header({ setSearchItem, setSelectedCategory, selectedCategory }) {
             <div className="flex items-center justify-center gap-[0.3rem]">
               <p className="font-Inter font-bold text-[small] ">Cart</p>
               {cartCount > 0 && (
-                <span className="pt-[0.2rem] pb-[0.2rem] pr-[0.5rem] pl-[0.5rem] rounded-[70%] bg-primary text-white text-[smaller]  ">
+                <span className="pt-[0.2rem] pb-[0.2rem] pr-[0.5rem] pl-[0.5rem] rounded-[50%] bg-primary text-white text-[smaller]  ">
                   {cartCount}
                 </span>
               )}

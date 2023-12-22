@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Components/Header";
 import Result from "./Components/Result";
-import { CartProvider } from "./Components/CartContext";
 import "./styles.css";
 
 function App() {
@@ -44,20 +43,14 @@ function App() {
   }, [selectedCategory, searchItem, productsData]);
 
   return (
-    // cart provider component to pass our id's from card component , local storage to header component
-    <CartProvider>
-      <div className="m-0 p-0 bg-body-background mx-auto box-border font-Inter h-[100vh]">
-        <Header
-          setSearchItem={setSearchItem}
-          setSelectedCategory={setSelectedCategory}
-          selectedCategory={selectedCategory}
-        />
-        <Result
-          productsData={filteredData}
-          selectedCategory={selectedCategory}
-        />
-      </div>
-    </CartProvider>
+    <div className="m-0 p-0 bg-body-background mx-auto box-border font-Inter h-[100vh]">
+      <Header
+        setSearchItem={setSearchItem}
+        setSelectedCategory={setSelectedCategory}
+        selectedCategory={selectedCategory}
+      />
+      <Result productsData={filteredData} selectedCategory={selectedCategory} />
+    </div>
   );
 }
 
