@@ -46,7 +46,7 @@ function App() {
   return (
     // cart provider component to pass our id's from card component , local storage to header component
     <CartProvider>
-      <>
+      <div className="m-0 p-0 bg-body-background mx-auto box-border font-Inter h-[100vh]">
         <Header
           setSearchItem={setSearchItem}
           setSelectedCategory={setSelectedCategory}
@@ -56,7 +56,7 @@ function App() {
           productsData={filteredData}
           selectedCategory={selectedCategory}
         />
-      </>
+      </div>
     </CartProvider>
   );
 }
