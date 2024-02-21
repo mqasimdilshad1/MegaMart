@@ -1,0 +1,237 @@
+:root {
+  --primary: #008ecc;
+  --white: #fff;
+  --text: #666666;
+  --heading: #222222;
+  --card-border: #ededed;
+  --card-background: #f5f5f5;
+  --searchbar-background: #f3f9fb;
+  --dropdown-border: #ccc;
+  --dropdowncontent-hover: darkgray;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 0;
+}
+
+.header-content {
+  height: 5.6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--dropdown-border);
+}
+
+.logo {
+  fill: var(--primary);
+  width: 8.6rem;
+  height: 1.7rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.logo:hover {
+  cursor: pointer;
+}
+
+.logo h1 {
+  color: var(--primary);
+  text-align: center;
+  font-family: Inter;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+.logo img {
+  height: 1.7rem;
+  width: 8.6rem;
+}
+
+.cart-icon {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: flex;
+  justify-content: baseline;
+  align-content: baseline;
+  align-items: center;
+  gap: 5px;
+}
+.cart-icon:hover {
+  cursor: pointer;
+}
+.cart-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+.cart-detail span {
+  padding: 0.2rem 0.5rem;
+  border-radius: 70%;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: smaller;
+}
+.cart-detail p {
+  font-family: Inter;
+  font-weight: bold;
+  font-size: small;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 30%;
+  background-color: var(--white);
+  border: 1px solid var(--dropdown-border);
+  display: block;
+  z-index: 1;
+  color: var(--text);
+  font-family: Inter;
+}
+
+.dropdown-content option {
+  background-color: var(--card-background);
+  border-bottom: 1px solid var(--card-border);
+  color: var(--heading);
+  font-family: Inter;
+}
+
+.dropdown-content option:hover {
+  background-color: var(--card-border);
+  cursor: pointer;
+  border-bottom: 1px solid var(--searchbar-background);
+  color: var(--heading);
+}
+
+.search-field-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-field {
+  height: 3rem;
+  flex-shrink: 0;
+  background-color: var(--searchbar-background);
+  padding-left: 1.8rem;
+  font-size: medium;
+  border: none;
+  padding-right: 11.2rem;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  outline: none;
+  font-family: Inter;
+}
+.search-field:active {
+  border: none;
+}
+
+.search-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  margin-left: -1.8rem;
+}
+
+.dropdown-arrow:hover {
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  background-color: var(--searchbar-background);
+  padding: 0.95rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-family: Inter;
+}
+
+@media screen and (max-width: 1128px) {
+  .header-content {
+    border-bottom: none;
+  }
+  .container {
+    border-bottom: 1px solid var(--dropdown-border);
+    padding: 0 30px 0 30px;
+  }
+  .search-field {
+    padding-right: 1.8rem;
+  }
+  .dropdown-arrow {
+    padding: 0.95rem;
+  }
+  .logo img {
+    height: 1.5rem;
+    width: 5.6rem;
+  }
+  .logo h1 {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .header-content {
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .search-field-container {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  .search-field {
+    width: 100%;
+    border-radius: 0;
+    padding-left: 80px;
+    border-top: 2px solid var(gray);
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 1rem;
+    right: 0.5rem;
+    cursor: pointer;
+    margin-right: 0px;
+  }
+
+  .dropdown-content {
+    width: 100%;
+    justify-content: space-between;
+    top: 100%;
+  }
+
+  .dropdown-arrow {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .logo img {
+    height: 1.5rem;
+    width: 5.6rem;
+  }
+
+  .logo h1 {
+    font-size: 1.7rem;
+  }
+  .dropdown-arrow {
+    position: absolute;
+    left: -1.8rem;
+  }
+}
