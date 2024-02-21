@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import SearchBar from "./SearchBar";
-import { useCart } from "./CartContext";
+import { useCart } from "./CartStore";
 
 function Header({ setSearchItem, setSelectedCategory, selectedCategory }) {
   const { cartCount } = useCart();
@@ -9,7 +9,7 @@ function Header({ setSearchItem, setSelectedCategory, selectedCategory }) {
   useEffect(() => {}, [cartCount]);
 
   return (
-    <header className="bg-white">
+    <header className="bg-white fixed w-full z-50">
       <div className="p-0 max-w-[1200px] mx-auto">
         <div className="h-[5.6rem] flex justify-between items-center lg:bg-white flex-wrap">
           <div className="fill-primary text-primary lg:w-[10.6rem] lg:h-[2rem]  flex items-baseline gap-[0.6rem] order-1 lg:basis-[30%] hover:cursor-pointer lg:mb-[20px] md:basis-[25%] md:pl-[30px] basis-[30%] mt-[25px] pl-[30px] w-[6.6rem] lg:pl-[8px] ">
@@ -32,7 +32,7 @@ function Header({ setSearchItem, setSelectedCategory, selectedCategory }) {
             <div className="flex items-center justify-center gap-[0.3rem]">
               <p className="font-Inter font-bold text-[small] ">Cart</p>
               {cartCount > 0 && (
-                <span className="pt-[0.2rem] pb-[0.2rem] pr-[0.5rem] pl-[0.5rem] rounded-[70%] bg-primary text-white text-[smaller]  ">
+                <span className="pt-[0.2rem] pb-[0.2rem] pr-[0.5rem] pl-[0.5rem] rounded-[50%] bg-primary text-white text-[smaller]  ">
                   {cartCount}
                 </span>
               )}

@@ -3,10 +3,10 @@ import Card from "./Card";
 function Result({ productsData }) {
   return (
     <div className="bg-body-background">
-      <div className="bg-body-background grid max-w-[1200px] mx-auto ">
+      <div className="bg-body-background grid max-w-[1200px] mx-auto  ">
         <h1
           className="font-Inter lg:pt-[30px] text-primary  
-      font-bold text-[35px] pt-[70px] col-span-1 ml-[40px] lg:ml-[10px]"
+      font-bold text-[35px] pt-[70px] col-span-1 ml-[40px] lg:ml-[10px] lg:mt-[80px] md:mt-[80px] mt-[80px]"
         >
           Results
         </h1>

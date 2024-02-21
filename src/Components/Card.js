@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Rating from "react-rating-stars-component";
 import { BsCart2 } from "react-icons/bs";
-import { useCart } from "./CartContext";
+import { useCart } from "./CartStore";
 
 function Card({ product }) {
   const { addToCart } = useCart();
@@ -26,7 +26,7 @@ function Card({ product }) {
   return (
     <div
       className="lg:relative md:relative rounded-[16px] lg:w-[14.1rem] lg:h-[18rem] overflow-hidden box-border 
-      shadow-card-shadow border border-solid shadow-lg border-gray-300 group md:w-[14.1rem] md:h-[17.7rem] w-[18.7rem] h-[18.2rem]"
+      shadow-card-shadow border border-solid shadow-lg border-gray-300 group md:w-[14.1rem] md:h-[17.7rem] w-[18.7rem] h-[18.2rem] "
     >
       <div className="w-[100%] h-[72%] overflow-hidden relative bg-white flex justify-center items-center      ">
         <div className="absolute flex top-[-8px] right-[-13px] bg-primary text-white pt-[20px] pr-[33px] pb-[6px] pl-[10px] rounded-[10px] text-[14px] font-Inter flex-col items-end justify-end z-[1]">
