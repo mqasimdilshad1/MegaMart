@@ -5,14 +5,17 @@ import { CartProvider } from "./Components/CartContext";
 import "./styles.css";
 
 function App() {
-  const [productData, setProductData] = useState([]);
+  const [productsData, setProductsData] = useState([]);
+  const [searchItem, setSearchItem] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch("https://fakestoreapi.com/products");
         const data = await response.json();
-        setProductData(data);
+        setProductsData(data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -21,12 +24,38 @@ function App() {
     fetchData();
   }, []);
 
+  // search filtraion and category wise filtration in this use effect
+  useEffect(() => {
+    let filteredProducts;
+
+    if (selectedCategory === "All") {
+      filteredProducts = productsData.filter((product) =>
+        product.title.toLowerCase().includes(searchItem.toLowerCase())
+      );
+    } else {
+      filteredProducts = productsData.filter(
+        (product) =>
+          product.category === selectedCategory &&
+          product.title.toLowerCase().includes(searchItem.toLowerCase())
+      );
+    }
+
+    setFilteredData(filteredProducts);
+  }, [selectedCategory, searchItem, productsData]);
+
   return (
     // cart provider component to pass our id's from card component , local storage to header component
     <CartProvider>
       <>
-        <Header />
-        <Result productData={productData} />
+        <Header
+          setSearchItem={setSearchItem}
+          setSelectedCategory={setSelectedCategory}
+          selectedCategory={selectedCategory}
+        />
+        <Result
+          productsData={filteredData}
+          selectedCategory={selectedCategory}
+        />
       </>
     </CartProvider>
   );
